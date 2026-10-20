@@ -1,0 +1,11 @@
+# Sanitised Caddyfile example for Jellyfin
+#
+# Replace jellyfin.example.com with a domain you control.
+# This is a generic example, not a copy of any live server configuration.
+# Caddy's automatic HTTPS requires public DNS to point to this server and
+# inbound TCP 443 (and normally TCP 80 for certificate validation/redirects)
+# to be reachable, subject to your DNS/provider setup.
+
+jellyfin.example.com {
+    reverse_proxy 127.0.0.1:8096
+}
