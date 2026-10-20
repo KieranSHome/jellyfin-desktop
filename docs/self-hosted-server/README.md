@@ -39,6 +39,8 @@ Confirm paths and the active data directory on your own system before using comm
 6. Configure individual Jellyfin user accounts for family and friends.
 7. Check current Jellyfin, Caddy, operating-system, plugin and GPU-driver compatibility before updates or changes.
 
+A sanitised starter configuration is available at [`Caddyfile.example`](./Caddyfile.example). It uses the placeholder hostname `jellyfin.example.com`; replace it with a domain you control. It is an example, not a copy of the live server configuration.
+
 Do not copy a Caddyfile blindly from another installation. Validate the actual configuration before restarting Caddy, and keep a secure copy of the known-working file.
 
 ## Windows diagnostics
@@ -115,7 +117,7 @@ Hardware transcoding depends on the Jellyfin version, operating system, GPU, dri
 
 ## Change log
 
-- **2026-10-20:** Initial sanitised guide added, covering a Windows Jellyfin install, Caddy HTTPS reverse proxy, diagnostics, backups and safe change management.
+- **2026-10-20:** Added a sanitised Caddyfile example with a placeholder hostname and linked it from this guide.
 
 ## Official resources
 
