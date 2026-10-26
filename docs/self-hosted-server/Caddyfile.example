@@ -5,7 +5,18 @@
 # Caddy's automatic HTTPS requires public DNS to point to this server and
 # inbound TCP 443 (and normally TCP 80 for certificate validation/redirects)
 # to be reachable, subject to your DNS/provider setup.
-
+#
+# Use loopback only if Jellyfin actually listens on 127.0.0.1:8096:
 jellyfin.example.com {
     reverse_proxy 127.0.0.1:8096
 }
+
+# If Jellyfin is bound only to the server's LAN interface, use its reserved
+# LAN IPv4 address instead of loopback, for example:
+#
+# jellyfin.example.com {
+#     reverse_proxy 192.168.1.100:8096
+# }
+#
+# Replace the example private address with the correct LAN address. Verify
+# the listener and health endpoint before reloading/restarting Caddy.
